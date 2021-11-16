@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Part_10._5_Student_Forms
 {
-    public partial class Form1 : Form
+    public partial class FormStudents : Form
     {
         public static List<Student> students = new List<Student>();
 
-        public Form1()
+        public FormStudents()
         {
             InitializeComponent();
             students.Add(new Student("Erik", "Jeffery"));
@@ -22,7 +22,14 @@ namespace Part_10._5_Student_Forms
             students.Add(new Student("Ellanna", "Wilson"));
             students.Add(new Student("Kenny", "Fournie"));
             students.Add(new Student("Jonah", "Birch"));
+            lstStudents.DataSource = null;
             lstStudents.DataSource = students;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FormAddStudent frmAddStudent = new FormAddStudent();
+            frmAddStudent.ShowDialog();
         }
     }
 }

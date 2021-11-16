@@ -16,7 +16,7 @@ namespace Part_10._5_Student_Forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormStudents());
         }
     }
 }
