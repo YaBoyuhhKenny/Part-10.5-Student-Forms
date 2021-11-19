@@ -21,7 +21,12 @@ namespace Part_10._5_Student_Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            if (txtFirstName.Text.Trim() != "" && txtLastName.Text.Trim() != "")
+            {
+                FormStudents.students.Add(new Student(txtFirstName.Text, txtLastName.Text));
+                txtFirstName.Text = "";
+                txtLastName.Text = "";
+            }
         }
     }
 }
