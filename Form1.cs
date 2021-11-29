@@ -30,6 +30,8 @@ namespace Part_10._5_Student_Forms
         {
             FormAddStudent frmAddStudent = new FormAddStudent();
             frmAddStudent.ShowDialog();
+            lstStudents.DataSource = null;
+            lstStudents.DataSource = students;
         }
     }
 }

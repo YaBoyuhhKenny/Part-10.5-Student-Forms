@@ -26,7 +26,16 @@ namespace Part_10._5_Student_Forms
                 FormStudents.students.Add(new Student(txtFirstName.Text, txtLastName.Text));
                 txtFirstName.Text = "";
                 txtLastName.Text = "";
+                lstStudents.DataSource = null;
+                lstStudents.DataSource = FormStudents.students; 
             }
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            lstStudents.DataSource = null;
+            lstStudents.DataSource = FormStudents.students;
         }
     }
 }
