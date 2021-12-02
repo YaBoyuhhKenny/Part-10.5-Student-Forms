@@ -33,5 +33,20 @@ namespace Part_10._5_Student_Forms
             lstStudents.DataSource = null;
             lstStudents.DataSource = students;
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            students.RemoveAt(lstStudents.SelectedIndex);
+            lstStudents.DataSource = null;
+            lstStudents.DataSource = students;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            FormEditStudent frmEditStudent = new FormEditStudent();
+            frmEditStudent.ShowDialog();            
+            lstStudents.DataSource = null;
+            lstStudents.DataSource = students;
+        }
     }
 }
