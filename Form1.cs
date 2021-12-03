@@ -13,6 +13,7 @@ namespace Part_10._5_Student_Forms
     public partial class FormStudents : Form
     {
         public static List<Student> students = new List<Student>();
+        public static int index = 0;
 
         public FormStudents()
         {
@@ -47,6 +48,20 @@ namespace Part_10._5_Student_Forms
             frmEditStudent.ShowDialog();            
             lstStudents.DataSource = null;
             lstStudents.DataSource = students;
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnData_Click(object sender, EventArgs e)
+        {           
+            FormStudentDetails frmStudentDetails = new FormStudentDetails(lstStudents.SelectedIndex);            
+            frmStudentDetails.ShowDialog();
+            lstStudents.DataSource = null;
+            lstStudents.DataSource = students;
+            //fix selected index
         }
     }
 }

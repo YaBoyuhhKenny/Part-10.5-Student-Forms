@@ -15,6 +15,8 @@ namespace Part_10._5_Student_Forms
         public FormEditStudent()
         {
             InitializeComponent();
+            lstStudents.DataSource = null;
+            lstStudents.DataSource = FormStudents.students;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,6 +30,11 @@ namespace Part_10._5_Student_Forms
                 lstStudents.DataSource = null;
                 lstStudents.DataSource = FormStudents.students;
             }
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

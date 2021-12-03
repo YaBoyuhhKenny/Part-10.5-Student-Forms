@@ -66,6 +66,7 @@
             this.btnData.TabIndex = 2;
             this.btnData.Text = "Get student data";
             this.btnData.UseVisualStyleBackColor = true;
+            this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
             // btnEdit
             // 
@@ -98,6 +99,7 @@
             this.btnDone.TabIndex = 5;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // FormStudents
             // 
